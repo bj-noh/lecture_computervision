@@ -6,7 +6,7 @@ def main():
     
     # Process    
     shape_rs = img.shape
-    print(shape_rs)
+    print(shape_rs) 
 
     height, width = img.shape[:2]
     print(height, width)
