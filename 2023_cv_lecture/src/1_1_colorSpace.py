@@ -3,7 +3,7 @@ import numpy as np
 
 
 def main(option):
-    path = './Data/dog1.jpg' # Edit your image path
+    path = './data/dog1.jpg' # Edit your image path
 
     if option == 'rgb':
         src = cv2.imread(path, cv2.IMREAD_COLOR)

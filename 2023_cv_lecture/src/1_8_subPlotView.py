@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def main():
-    path = './Data/view.png' # Edit your image path
+    path = './data/view.png' # Edit your image path
     
     # Image Load
     image = cv2.imread(path)

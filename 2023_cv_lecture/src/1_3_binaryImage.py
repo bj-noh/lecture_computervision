@@ -1,7 +1,7 @@
 import cv2
 
 def main():
-    path = './Data/dog1.jpg' # Edit your image path 
+    path = './data/dog1.jpg' # Edit your image path 
     src = cv2.imread(path)
     gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
     ret, dst = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)

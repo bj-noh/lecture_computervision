@@ -9,7 +9,7 @@ def gamma_correction(image, gamma=1.0):
 
 
 def main():
-    path = './Data/dog1.jpg' # Edit your image path
+    path = './data/dog1.jpg' # Edit your image path
     
     # Image Load
     image = cv2.imread(path)

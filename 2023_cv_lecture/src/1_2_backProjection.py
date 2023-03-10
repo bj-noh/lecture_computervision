@@ -4,7 +4,7 @@ import sys
 
 def main(): 
 
-    path = './Data/dog1.jpg' # Edit your image path
+    path = './data/dog1.jpg' # Edit your image path
     src = cv2.imread(path)
 
     # ROI extraction
