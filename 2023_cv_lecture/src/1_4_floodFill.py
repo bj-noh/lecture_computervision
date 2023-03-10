@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 def main():
-    path = '../Data/mon.png' # Edit your image path
+    path = './Data/dog1.jpg' # Edit your image path
     src = cv2.imread(path)
     rows, cols = src.shape[:2]
     mask = np.zeros((rows+2, cols+2), np.uint8)
