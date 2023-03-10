@@ -1,7 +1,7 @@
 import cv2
 
 def main():
-    path = '../Data/dog1.jpg' # Edit your image path
+    path = './Data/dog1.jpg' # Edit your image path
     img = cv2.imread(path)
     
     # Process    
