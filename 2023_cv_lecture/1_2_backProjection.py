@@ -2,7 +2,7 @@ import cv2
 import sys
 
 
-def main():
+def main(): 
 
     path = './Data/dog1.jpg' # Edit your image path
     src = cv2.imread(path)

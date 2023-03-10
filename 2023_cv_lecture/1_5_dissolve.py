@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-def gamma_correction(image, gamma=1.0):
+def gamma_correction(image, gamma=1.0):   
     inv_gamma = 1 / gamma
     output = np.uint8(((image / 255) ** inv_gamma) * 255)
     return output
@@ -38,7 +38,6 @@ def main():
     plt.imshow(output2, cmap='gray')
 
     plt.show()
-
 
 if __name__ == '__main__':
     main()
