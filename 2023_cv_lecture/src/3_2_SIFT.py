@@ -12,6 +12,9 @@ def main():
 
     kp, des = sift.detectAndCompute(gray, None)
 
+    print('keypoint:',len(kp), 'descriptor:', des.shape)
+    print(des)
+
     gray = cv2.drawKeypoints(gray, kp, None, flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
     cv2.imshow('sift', gray)
     cv2.waitKey()
