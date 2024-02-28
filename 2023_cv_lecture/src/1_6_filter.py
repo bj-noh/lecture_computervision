@@ -18,10 +18,10 @@ def main():
                       [0.04, 0.04, 0.04, 0.04, 0.04]])
     '''
 
-    blured = cv2.filter2D(image, -1, kernel)
+    blurred = cv2.filter2D(image, -1, kernel)
         
     cv2.imshow('origin', image)
-    cv2.imshow('avrg blur', blured) 
+    cv2.imshow('avrg blur', blurred) 
     cv2.waitKey()
     cv2.destroyAllWindows()
 
