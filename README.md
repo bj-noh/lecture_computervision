@@ -4,12 +4,6 @@
   <img src="docs/assets/course_hero.png" alt="Computer Vision Lab Session banner" width="100%">
 </p>
 
-## Demo
-
-<p align="center">
-  <img src="docs/assets/lab_demo.gif" alt="Lab demo preview" width="900">
-</p>
-
 ## Lab Sessions
 
 <table>
@@ -67,30 +61,3 @@
     </td>
   </tr>
 </table>
-
-## Quick Start
-
-```bash
-pip install opencv-python matplotlib numpy notebook scikit-image PyQt5 torch torchvision torchaudio ultralytics
-```
-
-Then open any lecture folder in `lab-session/` and start with the notebook or the scripts in `examples/`.
-
-## Repository Layout
-
-```text
-lab-session/
-├── 01-opencv-practice/
-├── 02-image-processing-basics/
-├── 03-edge-and-region/
-├── 04-local-features/
-├── 05-vision-agent/
-└── 06-deep-learning-vision/
-```
-
-## Notes
-
-- Every session includes its own `README.md`, `ipynb`, `examples/`, and `data/`.
-- GUI and webcam examples should be run on a local desktop environment.
-- `05-vision-agent` requires `PyQt5`.
-- `06-deep-learning-vision` uses `PyTorch` and `Ultralytics YOLO`, and pre-trained weights may download on first run.
