@@ -16,6 +16,7 @@ This directory stores hands-on materials derived from lecture slides.
 - `03-edge-and-region/`: Sobel and Canny edge detection, contours, Hough transform, superpixels, and region features
 - `04-local-features/`: Harris corner response, SIFT keypoints, and FLANN-based feature matching
 - `05-vision-agent/`: PyQt-based vision apps for control panels, webcam capture, GrabCut interaction, alert logic, and visual effects
+- `06-deep-learning-vision/`: MNIST classification, LeNet, augmentation, pre-trained ResNet inference, Mask R-CNN, and YOLO
 
 ## Legacy files
 

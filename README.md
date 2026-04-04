@@ -58,12 +58,24 @@
     </td>
   </tr>
   <tr>
-    <td colspan="2" valign="top">
+    <td width="50%" valign="top">
       <a href="lab-session/05-vision-agent">
         <img src="docs/assets/thumb_05.png" alt="05 Vision Agent" width="100%">
       </a>
       <b>05 Vision Agent</b><br>
       <sub>PyQt interfaces, webcam agents, GrabCut, monitoring logic, and photo effects</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="lab-session/06-deep-learning-vision">
+        <img src="docs/assets/thumb_06.png" alt="06 Deep Learning Vision" width="100%">
+      </a>
+      <b>06 Deep Learning Vision</b><br>
+      <sub>MNIST, LeNet, augmentation, pre-trained ResNet, Mask R-CNN, and YOLO</sub>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <sub>The lab numbering starts from lecture <code>#2</code>, so <code>06-deep-learning-vision</code> corresponds to lecture <code>#7</code>.</sub>
     </td>
   </tr>
 </table>
@@ -71,7 +83,7 @@
 ## Quick Start
 
 ```bash
-pip install opencv-python matplotlib numpy notebook scikit-image PyQt5
+pip install opencv-python matplotlib numpy notebook scikit-image PyQt5 torch torchvision torchaudio ultralytics
 ```
 
 Then open any lecture folder in `lab-session/` and start with the notebook or the scripts in `examples/`.
@@ -84,7 +96,8 @@ lab-session/
 ├── 02-image-processing-basics/
 ├── 03-edge-and-region/
 ├── 04-local-features/
-└── 05-vision-agent/
+├── 05-vision-agent/
+└── 06-deep-learning-vision/
 ```
 
 ## Notes
@@ -92,3 +105,4 @@ lab-session/
 - Every session includes its own `README.md`, `ipynb`, `examples/`, and `data/`.
 - GUI and webcam examples should be run on a local desktop environment.
 - `05-vision-agent` requires `PyQt5`.
+- `06-deep-learning-vision` uses `PyTorch` and `Ultralytics YOLO`, and pre-trained weights may download on first run.
