@@ -4,18 +4,6 @@
   <img src="docs/assets/course_hero.png" alt="Computer Vision Lab Session banner" width="100%">
 </p>
 
-<p align="center">
-  Lecture slides reworked into notebooks, runnable scripts, and small vision applications under <code>lab-session/</code>.
-</p>
-
-<p align="center">
-  <a href="#quick-start">Quick Start</a>
-  ·
-  <a href="#lab-sessions">Lab Sessions</a>
-  ·
-  <a href="lab-session">Browse lab-session/</a>
-</p>
-
 ## Demo
 
 <p align="center">
