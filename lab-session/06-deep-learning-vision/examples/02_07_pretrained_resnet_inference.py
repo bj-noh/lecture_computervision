@@ -1,3 +1,15 @@
+"""
+02_07_pretrained_resnet_inference.py
+────────────────────────────────────────────────────────────────────────────
+ImageNet 으로 사전학습된 ResNet-18을 사용해 단일 이미지 분류를 수행합니다.
+
+실행 예시:
+    python 02_07_pretrained_resnet_inference.py --image data/dog1.jpg
+
+출력:
+    outputs/02_07_resnet_topk.png
+────────────────────────────────────────────────────────────────────────────
+"""
 from __future__ import annotations
 
 import argparse
@@ -8,12 +20,18 @@ import torch
 from PIL import Image
 from torchvision.models import ResNet18_Weights, resnet18
 
+from output_naming import with_script_prefix
+
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run ImageNet inference with ResNet18.")
+    parser = argparse.ArgumentParser(description="Run ImageNet inference with ResNet-18.")
     parser.add_argument("--image", type=Path, default=Path("data/dog1.jpg"))
     parser.add_argument("--topk", type=int, default=5)
-    parser.add_argument("--output", type=Path, default=Path("outputs/resnet_topk.png"))
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("outputs") / with_script_prefix(__file__, "resnet_topk.png"),
+    )
     args = parser.parse_args()
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -45,7 +63,7 @@ def main() -> None:
     axes[1].barh(range(len(labels)), scores[::-1], color="#4f8cff")
     axes[1].set_yticks(range(len(labels)), labels[::-1])
     axes[1].set_xlim(0.0, 1.0)
-    axes[1].set_title("Top predictions")
+    axes[1].set_title("Top Predictions")
     fig.tight_layout()
     fig.savefig(args.output, dpi=160)
     plt.close(fig)

@@ -1,3 +1,15 @@
+"""
+05_03_maskrcnn_segmentation.py
+────────────────────────────────────────────────────────────────────────────
+Mask R-CNN 을 사용해 객체 탐지와 인스턴스 세그멘테이션을 수행합니다.
+
+실행 예시:
+    python 05_03_maskrcnn_segmentation.py --image data/view.jpg
+
+출력:
+    outputs/05_03_maskrcnn_segmentation.png
+────────────────────────────────────────────────────────────────────────────
+"""
 from __future__ import annotations
 
 import argparse
@@ -11,22 +23,21 @@ from PIL import Image
 from torchvision.models.detection import MaskRCNN_ResNet50_FPN_Weights, maskrcnn_resnet50_fpn
 from torchvision.transforms.functional import to_tensor
 
+from output_naming import with_script_prefix
 
-COLORS = [
-    "#4f8cff",
-    "#11b981",
-    "#f97316",
-    "#ef4444",
-    "#8b5cf6",
-    "#06b6d4",
-]
+
+COLORS = ["#4f8cff", "#11b981", "#f97316", "#ef4444", "#8b5cf6", "#06b6d4"]
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run Mask R-CNN instance segmentation.")
     parser.add_argument("--image", type=Path, default=Path("data/view.jpg"))
     parser.add_argument("--threshold", type=float, default=0.7)
-    parser.add_argument("--output", type=Path, default=Path("outputs/maskrcnn_result.png"))
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("outputs") / with_script_prefix(__file__, "maskrcnn_segmentation.png"),
+    )
     args = parser.parse_args()
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
